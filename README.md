@@ -8,11 +8,12 @@
 ```
 {
  "EnvironmentNameValueList": ["Product", "Preproduct", "Development"],
- "EnvironmentName": "Development"
+ "EnvironmentName": "Development",
+ "ChangeEnvironment": "1"
 }
 ```
 
-环境配置文件：里面包含可配置的所有环境列表和当前配置的环境
+环境配置文件：里面包含可配置的所有环境列表、当前配置的环境和是否可以切换环境（0不可以，1可以）
 
 ### LGUrlConfig.json
 URL、全局变量等配置文件：可以根据不同环境配置不同的value值，也可以对于所有环境配置统一的值，
