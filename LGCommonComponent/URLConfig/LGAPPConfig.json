@@ -1,0 +1,6 @@
+{
+ "EnvironmentNameValueList": ["Product", "Preproduct", "Development"],
+ "EnvironmentName": "Development",
+ "ChangeEnvironment": "1"
+}
+

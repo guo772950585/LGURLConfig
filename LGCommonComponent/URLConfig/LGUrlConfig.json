@@ -1,0 +1,34 @@
+{
+    "Base": {
+        "LGMainComponent_getAdvertisement": {
+            "SERVER_PATH_URL": "main/getAdvertisement"
+        }
+        "LGMainComponent_getMainList": {
+            "SERVER_PATH_URL": "main/getMainList"
+        },
+        "LGDemo_demoKey": "demoKey"
+    },
+    "Environment": {
+        "Product": {
+            "SERVER_HOST_URL": "https://www.product.com",
+            "LGMainComponent_getMainList": {
+                "SERVER_HOST_URL": "https://www.customProduct.com"
+            },
+            "LGDemo_webViewURL": "https://www.webViewProduct.com"
+        },
+        "Preproduct": {
+            "SERVER_HOST_URL": "https://www.preproduct.com",
+            "LGMainComponent_getMainList": {
+                "SERVER_HOST_URL": "https://www.customPreproduct.com"
+            },
+            "LGDemo_webViewURL": "https://www.webViewPreproduct.com"
+        },
+        "Development": {
+            "SERVER_HOST_URL": "https://www.development.com",
+            "LGMainComponent_getMainList": {
+                "SERVER_HOST_URL": "https://www.customPreproduct.com"
+            },
+            "LGDemo_webViewURL": "https://www.webViewDevelopment.com"
+        }
+    }
+}
