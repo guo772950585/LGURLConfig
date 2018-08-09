@@ -73,9 +73,11 @@ URL、全局变量等配置文件：可以根据不同环境配置不同的value
 * LGDemo_webViewURL
 
 对于每个环境的value都不一样：
-(1) Product中value: `https://www.webViewProduct.com`
-(2) Preproduct中value: `https://www.webViewPreproduct.com`
-(3) Development中value: `https://www.webViewDevelopment.com`
+
+1. Product中value: `https://www.webViewProduct.com`
+2. Preproduct中value: `https://www.webViewPreproduct.com`
+3. Development中value: `https://www.webViewDevelopment.com`
+
 
 ### URL
 首先URL对应的key-value格式如下:
@@ -103,7 +105,7 @@ URL、全局变量等配置文件：可以根据不同环境配置不同的value
     "SERVER_HOST_URL": "https://www.development.com"
  }
 ```
- 如果某个请求有自己特定的host,如`LGMainComponent_getMainList`请求则，可以在每个**Environment**中的每个环境下自己配置自己的host：
+ 如果某个请求有自己特定的host,如`LGMainComponent_getMainList`请求，则可以在每个**Environment**中的每个环境下自己配置自己的host：
  
 ```
  "Product": {
@@ -167,20 +169,23 @@ URL配置文件工具类，主要对于URL：提供host、path、url三个个获
 @end
 ```
 * serverHostWithIdentity
-  （1）先从Environment的当前环境对象中获取key为identity的对象，再在它里面获取key为SERVER_HOST_URL的value值，有就返回，没有继续下一步
-  （2）再从Base对象中获取key为identity的对象，再在它里面获取key为SERVER_HOST_URL的value值，有就返回，没有继续下一步
-  （3）最后再从Environment的当前环境对象中获取key为SERVER_HOST_URL的值，有就返回，没有返回空
+
+   1. 先从Environment的当前环境对象中获取key为identity的对象，再在它里面获取key为SERVER_HOST_URL的value值，有就返回，没有继续下一步
+   2. 再从Base对象中获取key为identity的对象，再在它里面获取key为SERVER_HOST_URL的value值，有就返回，没有继续下一步
+   3. 最后再从Environment的当前环境对象中获取key为SERVER_HOST_URL的值，有就返回，没有返回空
   
 * serverPathWithIdentity
-  （1）先从Environment的当前环境对象中获取key为identity的对象，再在它里面获取key为SERVER_PATH_URL的value值，有就返回，没有继续下一步
-  （2）再从Base对象中获取key为identity的对象，再在它里面获取key为SERVER_PATH_URL的value值，有就返回，没有继续下一步
+
+  1. 先从Environment的当前环境对象中获取key为identity的对象，再在它里面获取key为SERVER_PATH_URL的value值，有就返回，没有继续下一步
+  2. 再从Base对象中获取key为identity的对象，再在它里面获取key为SERVER_PATH_URL的value值，有就返回，没有继续下一步
   
 * serverUrl
   返回`serverHostWithIdentity`和`serverPathWithIdentity`返回值拼接的URL
 
 * valueWithKey
-  （1）先从Environment的当前环境对象中获取key为identity的值，有就返回，没有继续下一步
-  （2）再从Base对象中获取key为identity的值，有就返回，没有继续下一步
+
+   1. 先从Environment的当前环境对象中获取key为identity的值，有就返回，没有继续下一步
+   2. 再从Base对象中获取key为identity的值，有就返回，没有继续下一步
 
 ### LGAPPConfigManager
 
